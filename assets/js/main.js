@@ -62,11 +62,24 @@ for (var i = 0; i < listaStudenti.length; i++){
 //un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
 
 var nuovoStudente = {};
-document.querySelector("button").addEventListener("click", function () {
+document.querySelector("#nuovo_studente").addEventListener("click", function () {
     alert("Inserisci un nuovo studente nella lista!");
     nuovoStudente.nome = prompt("Inserisci il nome del nuovo studente!");
     nuovoStudente.cognome = prompt("Inserisci il cognome del nuovo studente!");
     nuovoStudente.età = Number(prompt("Inserisci l'età del nuovo studente!"));
     listaStudenti.push(nuovoStudente);
     console.log(nuovoStudente);
-})
+});
+
+
+//Aggiornare la lista scritta in precedenza
+//In modo da visualizzare il nuovo studente
+
+document.querySelector("#aggiorna_lista").addEventListener("click", function () {
+    lista.innerHTML = '<div id="lista"><h1>Lista Studenti</h1><button id="aggiorna_lista">Aggiorna Lista Studenti</button></div>';
+    for (var i = 0; i < listaStudenti.length; i++) {
+        for (var key in listaStudenti[i]) {
+            lista.insertAdjacentHTML("beforeend", `<p>${key}: ${listaStudenti[i][key]}</p>`);
+        }
+    }
+});
