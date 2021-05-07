@@ -76,7 +76,7 @@ document.querySelector("#nuovo_studente").addEventListener("click", function () 
 //In modo da visualizzare il nuovo studente
 
 document.querySelector("#aggiorna_lista").addEventListener("click", function () {
-    lista.innerHTML = '<div id="lista"><h1>Lista Studenti</h1><button id="aggiorna_lista">Aggiorna Lista Studenti</button></div>';
+    lista.innerHTML = "";
     for (var i = 0; i < listaStudenti.length; i++) {
         for (var key in listaStudenti[i]) {
             lista.insertAdjacentHTML("beforeend", `<p>${key}: ${listaStudenti[i][key]}</p>`);
