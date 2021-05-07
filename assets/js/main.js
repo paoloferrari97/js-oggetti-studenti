@@ -61,8 +61,8 @@ for (var i = 0; i < listaStudenti.length; i++){
 //Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere
 //un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
 
-var nuovoStudente = {};
 document.querySelector("#nuovo_studente").addEventListener("click", function () {
+    var nuovoStudente = {};
     alert("Inserisci un nuovo studente nella lista!");
     nuovoStudente.nome = prompt("Inserisci il nome del nuovo studente!");
     nuovoStudente.cognome = prompt("Inserisci il cognome del nuovo studente!");
